@@ -1,0 +1,87 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.intro-container {
+    height: 100vh;
+    background: linear-gradient(to bottom, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adding animated stars */
+.intro-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: stars 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes stars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+#gametitle {
+    height: 375px;
+    margin-top: -50px;
+    position: relative;
+    animation: moveTitle 4s infinite ease-in-out;
+  }
+  
+  @keyframes moveTitle {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: 10px;
+      left: 10px;
+    }
+    50% {
+      top: 0;
+      left: 20px;
+    }
+    75% {
+      top: -10px;
+      left: 10px;
+    }
+    100% {
+      top: 0;
+      left: 0;
+    }
+  }
+  #playbutton{
+    height: 150px;
+    /* margin-top: 100px; */
+  }
+  @media (max-width: 1024px) {
+    #gametitle {
+        height: 250px;
+        margin-top: -50px;
+        position: relative;
+        animation: moveTitle 4s infinite ease-in-out;
+      }
+      #playbutton{
+        height: 100px;
+      }
+  }

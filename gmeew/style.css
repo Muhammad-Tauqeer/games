@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    bottom: 70px;
+    left: 50px;
+    width: 100px;
+    height: 200px;
+    margin-top: 20px;
+     background-size: cover;
+}
+
+#obstacle {
+    position: absolute;
+    bottom: 100px;
+    right: -50px;
+    width: 50px;
+    height: 71px;
+    animation: moveObstacle1 2s linear infinite;
+}
+
+#obstacle2 {
+    position: absolute;
+    bottom: 90px;
+    right: -500px;
+    width: 50px;
+    height: 71px;
+    animation: moveObstacle2 3s linear infinite;
+}
+
+@keyframes moveObstacle1 {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+
+@keyframes moveObstacle2 {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+
+
+#retry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    display: none;
+    background-color:transparent ;
+    border: none;
+}
+#terrain {
+    position: absolute; /* To place it at the bottom */
+    bottom: 0; /* Stick to the bottom of the screen */
+    left: -50px; /* Start from the left */
+    width: 1500px; /* Full width of the screen */
+    height: 20%; /* Adjust height as percentage of the viewport */
+    background-image: url(computer-games-seamless-layers-background-set_1284-17713-removebg-preview.png);
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image */
+}
+#star{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(star.png);
+    animation: moveObstacle1 5s linear infinite;
+    margin-bottom: 400px;
+}
+#star2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(star.png);
+    animation: moveObstacle1 6s linear infinite;
+    margin-bottom: 350px;
+    margin-left: 50px;
+}
+#star3{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(star.png);
+    animation: moveObstacle1 7s linear infinite;
+    margin-bottom: 400px;
+    margin-left: 100px;
+}
+#star4{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(star.png);
+    animation: moveObstacle1 2.5s linear infinite;
+    margin-bottom: 450px;
+}
+#star6{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: url(image-Photoroom\ \(1\).png);
+    margin-bottom: 450px;
+    animation: moveObstacle1 5s linear infinite;
+}
+#star7{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: url(image-Photoroom\ \(1\).png);
+    margin-bottom: 400px;
+    animation: moveObstacle1 6s linear infinite;
+}
+#star8{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: url(image-Photoroom\ \(1\).png);
+    margin-bottom: 350px;
+    animation: moveObstacle1 7s linear infinite;
+}
+#star9{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: url(image-Photoroom\ \(1\).png);
+    margin-bottom: 300px;
+    animation: moveObstacle1 8s linear infinite;
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 14px; /* Base font size for medium screens */
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+
+    .game-container {
+        height: wh; /* Slightly reduced height for medium screens */
+    }
+
+    #player {
+        width: 80px; /* Reduced player size */
+        height: 160px;
+        bottom: 59px; /* Adjusted position for better scaling */
+    }
+
+    #obstacle, #obstacle2 {
+        width: 40px; /* Smaller obstacle sizes */
+        height: 60px;
+        bottom: 85px;
+    }
+
+
+    #retry {
+        font-size: 16px; /* Retry button font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    /* Stars */
+    #star, #star2, #star3, #star4 {
+       display: none;
+    }
+
+    #star6, #star7, #star8, #star9 {
+        display: none;
+        
+    }
+
+    /* Adjust obstacle animation speed for smaller screens */
+    @keyframes moveObstacle1 {
+        from {
+            right: -50px;
+        }
+        to {
+            right: 100vw;
+        }
+    }
+
+    @keyframes moveObstacle2 {
+        from {
+            right: -500px;
+        }
+        to {
+            right: 100vw;
+        }
+    }
+
+    /* Adjust animation for obstacles */
+    #obstacle {
+        animation: moveObstacle1 1s linear infinite; /* Slightly slower animation */
+    }
+
+    #obstacle2 {
+       display: none;
+    }
+
+    /* Adjust animation for stars */
+    @keyframes moveStar {
+        from {
+            right: -30px;
+        }
+        to {
+            right: 100vw;
+        }
+    }
+    }
+
