@@ -17,12 +17,13 @@ body {
 
 #player {
     position: absolute;
-    bottom: 70px;
+    bottom: 85px;
     left: 50px;
     width: 100px;
     height: 200px;
     margin-top: 20px;
-     background-size: cover;
+     padding: none;
+     
 }
 
 #obstacle {
@@ -42,6 +43,15 @@ body {
     height: 71px;
     animation: moveObstacle2 3s linear infinite;
 }
+@keyframes moveObstacleVertical {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 100vh; /* Move to the top of the viewport */
+    }
+}
+
 
 @keyframes moveObstacle1 {
     from {
@@ -60,7 +70,11 @@ body {
         right: 100vw;
     }
 }
+#Showcseimage{
+    bottom: 600px;
+    height: 30px;
 
+}
 
 #retry {
     position: absolute;
@@ -83,40 +97,6 @@ body {
     background-size: cover; /* Ensure the image covers the entire container */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-position: center; /* Center the image */
-}
-#star{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url(star.png);
-    animation: moveObstacle1 5s linear infinite;
-    margin-bottom: 400px;
-}
-#star2{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url(star.png);
-    animation: moveObstacle1 6s linear infinite;
-    margin-bottom: 350px;
-    margin-left: 50px;
-}
-#star3{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url(star.png);
-    animation: moveObstacle1 7s linear infinite;
-    margin-bottom: 400px;
-    margin-left: 100px;
-}
-#star4{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url(star.png);
-    animation: moveObstacle1 2.5s linear infinite;
-    margin-bottom: 450px;
 }
 #star6{
     position: absolute;
@@ -150,7 +130,43 @@ body {
     margin-bottom: 300px;
     animation: moveObstacle1 8s linear infinite;
 }
-@media screen and (max-width: 800px) {
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Fully visible at the start */
+    }
+    100% {
+        opacity: 0; /* Fully invisible at the end */
+    }
+}
+
+h3 {
+    position: absolute;
+        bottom: 320px;
+        left: 870px; 
+        font-size: 35px;
+        font-family: 'Luckiest Guy', Arial, sans-serif; /* Cartoon-style font */
+        color: #ff5722; /* Bright orange color for fun */ 
+    animation: fadeOut 5s forwards; /* Fade out over 20 seconds */
+}
+p{
+    position: absolute;
+    bottom: 320px;
+    left:930px;
+    font-size: medium;
+    font-weight: 300;
+    animation: fadeOut 5s forwards; /* Fade out over 20 seconds */
+    
+}
+#showcaseimg{
+    position: absolute;
+        bottom: 400px;
+        left: 970px; 
+        height: 100px;
+        width: 100px;
+        animation: fadeOut 5s forwards; /* Fade out over 20 seconds */
+}
+
+@media screen and (max-width: 768px) {
     body {
         font-size: 14px; /* Base font size for medium screens */
         background: linear-gradient(to bottom, #87CEEB, #ffffff);
@@ -163,13 +179,17 @@ body {
     #player {
         width: 80px; /* Reduced player size */
         height: 160px;
-        bottom: 59px; /* Adjusted position for better scaling */
+        bottom: 125px; /* Adjusted position for better scaling */
+        left: 0px;
+        
     }
 
     #obstacle, #obstacle2 {
         width: 40px; /* Smaller obstacle sizes */
         height: 60px;
-        bottom: 85px;
+        bottom: 135px;
+        animation: moveObstacle1 2s linear infinite;
+        border: 2px solid black;
     }
 
 
@@ -225,5 +245,67 @@ body {
             right: 100vw;
         }
     }
+    h3 {
+        position: absolute;
+            top: 280px;
+            left: 40px; 
+            font-size: xx-large;
+            font-family: 'Luckiest Guy', Arial, sans-serif; /* Cartoon-style font */
+            color: #ff5722; /* Bright orange color for fun */ 
+        animation: fadeOut 5s forwards; /*Fade out over 20 seconds*/
     }
+    p{
+        position: absolute;
+        top: 350px;
+        left:100px;
+        font-size: medium;
+        font-weight: 300;
+        animation: fadeOut 5s forwards; /* Fade out over 20 seconds */
+        
+    }
+    #showcaseimg{
+        position: absolute;
+            top: 200px;
+            left: 130px; 
+            animation: fadeOut 5s forwards; /* Fade out over 20 seconds */
+    }
+    }
+    /* Mobile specific animations */
+@keyframes moveObstacle1Mobile {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+
+/* @keyframes moveObstacle2Mobile {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 100vw;
+    }
+} */
+
+/* Desktop specific animations (Already defined) */
+@keyframes moveObstacle1 {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+
+@keyframes moveObstacle2 {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+
 
